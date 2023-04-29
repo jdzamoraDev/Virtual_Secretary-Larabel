@@ -1,10 +1,12 @@
 @extends('layouts.template')
-@section('content')
-
-@foreach ($services as $service)
 
 
-    <div class="modal fade" id="productModal{{$service->id}}" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+ @section('content')
+
+ <!-- un foreach para los productos -->
+
+            <!-- hay que anadir el id de producto entre corchetes-->
+    <div class="modal fade" id="productModal1" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl" role="document">
   <div class="modal-content">
                     <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
@@ -34,7 +36,7 @@
                 </div>
   </div>
 </div>
-                                    @endforeach
+
 @endsection
 
 
