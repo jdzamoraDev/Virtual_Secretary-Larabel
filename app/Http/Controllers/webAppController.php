@@ -8,9 +8,9 @@ class webAppController extends Controller
 {
     public function index()
     {
-        $services = Service::paginate();
 
-        return view('welcome', compact('services'));
+
+        return view('welcome');
     }
 
 }

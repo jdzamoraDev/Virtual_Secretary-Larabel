@@ -47,7 +47,8 @@
                         <img class="assistant" src="https://i.ibb.co/j53qBRq/pngwing-com-2.png" style="height: 160px; width:200px;
 ">
                     </div>
-                    <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal{{$service->id}}">
+                                                                            <!-- hay que anadir el id de producto entre corchetes-->
+                    <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1">
                             Start
                         </a>
                 </div>
