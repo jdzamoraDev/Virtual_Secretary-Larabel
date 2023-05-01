@@ -22,7 +22,7 @@
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">¿Qué desea realizar?</p>
                                    <div><a href="#!">Tickets</a></div>
-                                   <div><a href="store.blade.php">Store</a></div>
+                                   <div><a href="store">Store</a></div>
                                    <div><a href="#!">Contact us</a> <div>
 
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
