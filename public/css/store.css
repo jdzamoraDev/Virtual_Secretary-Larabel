@@ -26,7 +26,6 @@ body{
 
 img{
     max-width: 100%;
-    align-content: center;
 }
 
 /* Header */
@@ -190,4 +189,14 @@ header{
     color: #fff;
     padding: 15px 10px;
     cursor: pointer;
+}
+
+.cart-empty{
+    padding: 20px;
+    text-align: center;
+}
+
+
+.hidden{
+    display: none;
 }
