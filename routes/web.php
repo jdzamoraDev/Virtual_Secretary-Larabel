@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TeamController;
+use App\Http\Controllers\MarketController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,3 +27,7 @@ Auth::routes();
 // Route::resource('/services', App\Http\Controllers\ServiceController::class);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('teams', TeamController::class);
+
+Route::resource('market', MarketController::class);
