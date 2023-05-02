@@ -23,7 +23,7 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contactForm">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">Services</a></li>
                     </ul>
                 </div>
@@ -291,6 +291,18 @@
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
                         <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Destination input -->
+                            <div class="form-floating mb-3">
+                                <select class="form-control" id="destination" data-sb-validations="required">
+                                    <option value="">Choose a destination...</option>
+                                    <option value="support">Support</option>
+                                    <option value="partners">Partners</option>
+                                    <option value="team">Team</option>
+                                    <option value="players">Players</option>
+                                </select>
+                                <label for="destination">Destination</label>
+                                <div class="invalid-feedback" data-sb-feedback="destination:required">A destination is required.</div>
+                            </div>
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
