@@ -168,7 +168,7 @@
     <p class="lead">
       <a href="tickets" class="btn btn-lg btn-light fw-bold border-white bg-white">Buy tickets</a>
       <a href="store" class="btn btn-lg btn-light fw-bold border-white bg-white">Store</a>
-      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Contact</a>
+      <a href="contact" class="btn btn-lg btn-light fw-bold border-white bg-white">Contact</a>
     </p>
   </main>
 

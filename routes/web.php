@@ -34,4 +34,6 @@ Route::get('/checkout', [App\Http\Controllers\TeamController::class, 'checkout']
 Route::get('/tickets', [App\Http\Controllers\TeamController::class, 'home'])->name('tickets');
 Route::get('/store', [App\Http\Controllers\MarketController::class, 'homestore'])->name('store');
 
-
+Route::get('/contact', function () {
+    return view('contact');
+});
