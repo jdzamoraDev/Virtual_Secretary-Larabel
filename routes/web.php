@@ -31,3 +31,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('teams', TeamController::class);
 
 Route::resource('market', MarketController::class);
+
+Route::get('/checkout', [App\Http\Controllers\TeamController::class, 'checkout'])->name('checkout');
+Route::get('/tickets', [App\Http\Controllers\TeamController::class, 'home'])->name('tickets');

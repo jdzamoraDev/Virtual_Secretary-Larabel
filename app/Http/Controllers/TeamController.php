@@ -17,6 +17,13 @@ class TeamController extends Controller
         $teams = Team::all();
         return view('teams.index', compact('teams'));
     }
+    public function checkout() {
+        return view('dist/checkout');
+    }
+
+    public function home() {
+        return view('tickets/indexMatch');
+    }
 
     /**
      * Show the form for creating a new resource.
