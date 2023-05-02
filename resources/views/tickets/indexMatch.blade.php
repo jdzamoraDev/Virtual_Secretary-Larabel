@@ -35,7 +35,7 @@
 
 <body>
   
-<form action="" method="">
+<form action="{{ url('Team') }}" method="POST">
       <div class="container" id="">
         <div class="row">
           <div class="col-lg-6">

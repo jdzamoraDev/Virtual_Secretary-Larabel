@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('create_market_table', function (Blueprint $table) {
-            $table->string('img')
+        Schema::table('markets', function (Blueprint $table) {
+            $table->string('img');
         });
     }
 
@@ -21,7 +21,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('create_market_table', function (Blueprint $table) {
+        Schema::table('markets', function (Blueprint $table) {
             //
         });
     }
