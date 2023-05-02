@@ -170,6 +170,8 @@
 
       <a href="homestore" class="btn btn-lg btn-light fw-bold border-white bg-white">Store</a>
 
+      <a href="store" class="btn btn-lg btn-light fw-bold border-white bg-white">Store</a>
+
       <a href="contact" class="btn btn-lg btn-light fw-bold border-white bg-white">Contact</a>
     </p>
   </main>
