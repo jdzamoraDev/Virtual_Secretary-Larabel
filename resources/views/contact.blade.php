@@ -94,61 +94,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <div class="container" id="">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="widget-next-match">
-              <div class="widget-title">
-                <h3>Contact with us</h3>
-              </div>
-              <div class="widget-body mb-3">
-                <div class="widget-vs">
-                  <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
-                    
-
-
-                  </div>
-                </div>  
-              </div>
-
-              <div class="text-center widget-vs-contents mb-4">
-                <h4>Mail</h4>
-                <p class="mb-5">
-                  
-                </p>
-
-                <!-- Button for choose the game -->
-                
-                <li><a href="contactForm">Contact Us</a></li>                
-                <!-- Finish of button for choose the game -->
-
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </div> <!-- .site-section -->
-
-    <div class="container" id="">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="widget-next-match">
-              <div class="widget-title">
-                <h3>Contact with us</h3>
-              </div>
-              <div class="widget-body mb-3">
-                <div class="widget-vs">
-                  <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
-                    
-
-
-                  </div>
-                </div>  
-              </div>
-
-              <div class="text-center widget-vs-contents mb-4">
+            <div class="text-center widget-vs-contents mb-4">
                 <h4>Whatsapp</h4>
                 <p class="mb-5">
                   
@@ -156,36 +102,13 @@
 
                 <!-- Button for choose the game -->
                 
-                <a href="https://wa.me/+50685624469?text=Hello%20I%20Have%20a%20question%20about%20coding"><p><button class="btn btn-primary"> Send Message</button></p></a>
+                <a target="_blank" href="https://wa.me/+50685624469?text=Hello%20I%20Have%20a%20question%20about%20coding"><p><button class="btn btn-primary"> Send Message</button></p></a>
                 
                 <!-- Finish of button for choose the game -->
 
               </div>
             </div>
-          </div>
-          
-        </div>
-      </div>
-    </div> 
-    <!--tres-->
-    <div class="container" id="">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="widget-next-match">
-              <div class="widget-title">
-                <h3>Contact with us</h3>
-              </div>
-              <div class="widget-body mb-3">
-                <div class="widget-vs">
-                  <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
-                    
-
-
-                  </div>
-                </div>  
-              </div>
-
-              <div class="text-center widget-vs-contents mb-4">
+            <div class="text-center widget-vs-contents mb-4">
                 
                 <h4>Phone</h4>
                 <p class="mb-5">
@@ -194,17 +117,20 @@
 
                 <!-- Button for choose the game -->
 
-                <a href="tel:+506 85624469"><p><button class="btn btn-primary"> Send Message </button></p></a>
+                <a target="_blank" href="tel:+506 85624469"><p><button class="btn btn-primary"> Send Message </button></p></a>
                 
                 <!-- Finish of button for choose the game -->
 
               </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </div> 
+
+
+        </section>
+
+
+
+
+
+
 
         <!-- Footer-->
         <footer class="py-5 bg-dark">
