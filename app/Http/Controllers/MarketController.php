@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Market;
 use Illuminate\Http\Request;
-use App\Models\Market; // Import the Market model
 
+/**
+ * Class MarketController
+ * @package App\Http\Controllers
+ */
 class MarketController extends Controller
 {
     /**
@@ -14,8 +18,10 @@ class MarketController extends Controller
      */
     public function index()
     {
-        $marketItems = Market::all();
-        return view('market.index', compact('marketItems'));
+        $markets = Market::paginate();
+
+        return view('market.index', compact('markets'))
+            ->with('i', (request()->input('page', 1) - 1) * $markets->perPage());
     }
 
     /**
@@ -25,62 +31,79 @@ class MarketController extends Controller
      */
     public function create()
     {
-        // Implement the code to show the form for creating a new market item
+        $market = new Market();
+        return view('market.create', compact('market'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        // Implement the code to store a new market item in the database
+        request()->validate(Market::$rules);
+
+        $market = Market::create($request->all());
+
+        return redirect()->route('markets.index')
+            ->with('success', 'Market created successfully.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        // Implement the code to display a specific market item
+        $market = Market::find($id);
+
+        return view('market.show', compact('market'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        // Implement the code to show the form for editing a specific market item
+        $market = Market::find($id);
+
+        return view('market.edit', compact('market'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  Market $market
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Market $market)
     {
-        // Implement the code to update a specific market item in the database
+        request()->validate(Market::$rules);
+
+        $market->update($request->all());
+
+        return redirect()->route('markets.index')
+            ->with('success', 'Market updated successfully');
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
      */
     public function destroy($id)
     {
-        // Implement the code to delete a specific market item from the database
+        $market = Market::find($id)->delete();
+
+        return redirect()->route('markets.index')
+            ->with('success', 'Market deleted successfully');
     }
 }

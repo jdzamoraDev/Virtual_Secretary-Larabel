@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Market
+    Team
 @endsection
 
 @section('content')
@@ -13,11 +13,11 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Market') }}
+                                {{ __('Team') }}
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('markets.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('teams.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
                               </div>
@@ -36,28 +36,38 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Article</th>
-										<th>Size</th>
-										<th>Price</th>
-										<th>Img</th>
+										<th>Teama</th>
+										<th>Stadium</th>
+										<th>Time</th>
+										<th>Price1</th>
+										<th>Price2</th>
+										<th>Price3</th>
+										<th>Teamb</th>
+										<th>Imga</th>
+										<th>Imgb</th>
 
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($markets as $market)
+                                    @foreach ($teams as $team)
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $market->article }}</td>
-											<td>{{ $market->size }}</td>
-											<td>{{ $market->price }}</td>
-											<td>{{ $market->img }}</td>
+											<td>{{ $team->teamA }}</td>
+											<td>{{ $team->stadium }}</td>
+											<td>{{ $team->time }}</td>
+											<td>{{ $team->price1 }}</td>
+											<td>{{ $team->price2 }}</td>
+											<td>{{ $team->price3 }}</td>
+											<td>{{ $team->teamB }}</td>
+											<td>{{ $team->imgA }}</td>
+											<td>{{ $team->imgB }}</td>
 
                                             <td>
-                                                <form action="{{ route('markets.destroy',$market->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('markets.show',$market->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('markets.edit',$market->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                <form action="{{ route('teams.destroy',$team->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('teams.show',$team->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('teams.edit',$team->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
@@ -70,7 +80,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $markets->links() !!}
+                {!! $teams->links() !!}
             </div>
         </div>
     </div>

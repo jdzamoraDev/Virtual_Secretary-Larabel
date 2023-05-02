@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Team;
 use Illuminate\Http\Request;
-use App\Models\Team; // Import the Team model
 
+/**
+ * Class TeamController
+ * @package App\Http\Controllers
+ */
 class TeamController extends Controller
 {
     /**
@@ -14,15 +18,17 @@ class TeamController extends Controller
      */
     public function index()
     {
-        $teams = Team::all();
-        return view('teams.index', compact('teams'));
+        $teams = Team::paginate();
+
+        return view('team.index', compact('teams'))
+            ->with('i', (request()->input('page', 1) - 1) * $teams->perPage());
     }
     public function checkout() {
         return view('dist/checkout');
     }
-
     public function home() {
-        return view('tickets/indexMatch');
+        $teams = Team::paginate();
+        return view('tickets/indexMatch',compact('teams'));
     }
 
     /**
@@ -32,62 +38,79 @@ class TeamController extends Controller
      */
     public function create()
     {
-        // Implement the code to show the form for creating a new team
+        $team = new Team();
+        return view('team.create', compact('team'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        // Implement the code to store a new team in the database
+        request()->validate(Team::$rules);
+
+        $team = Team::create($request->all());
+
+        return redirect()->route('teams.index')
+            ->with('success', 'Team created successfully.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        // Implement the code to display a specific team
+        $team = Team::find($id);
+
+        return view('team.show', compact('team'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        // Implement the code to show the form for editing a specific team
+        $team = Team::find($id);
+
+        return view('team.edit', compact('team'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  Team $team
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Team $team)
     {
-        // Implement the code to update a specific team in the database
+        request()->validate(Team::$rules);
+
+        $team->update($request->all());
+
+        return redirect()->route('teams.index')
+            ->with('success', 'Team updated successfully');
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
      */
     public function destroy($id)
     {
-        // Implement the code to delete a specific team from the database
+        $team = Team::find($id)->delete();
+
+        return redirect()->route('teams.index')
+            ->with('success', 'Team deleted successfully');
     }
 }

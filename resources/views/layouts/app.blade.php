@@ -32,7 +32,7 @@
                     <ul class="navbar-nav me-auto">
                     @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('services.index') }}">{{ __('Services') }}</a>
+                                    <a class="nav-link" href="{{ route('teams.index') }}">{{ __('teams') }}</a>
                                 </li>
                             @endif
 

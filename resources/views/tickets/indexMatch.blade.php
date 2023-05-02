@@ -34,9 +34,9 @@
 
 
 <body>
-  
-<form action="{{ url('Team') }}" method="POST">
-      <div class="container" id="">
+@foreach($teams as $team)
+<form action="" method="POST">
+          <div class="container" id="{{ $team->id}}">
         <div class="row">
           <div class="col-lg-6">
             <div class="widget-next-match">
@@ -47,15 +47,15 @@
                 <div class="widget-vs">
                   <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
                     <div class="team-1 text-center">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Escudo_Saprissa_2012.svg/1200px-Escudo_Saprissa_2012.svg.png"" alt="Image">
-                      <h3>Saprissa</h3>
+                      <img src="{{ $team->imgA }}" alt="Image">
+                      <h3>{{ $team->teamA }}</h3>
                     </div>
                     <div>
                       <span class="vs"><span>VS</span></span>
                     </div>
                     <div class="team-2 text-center">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Escudo_del_Club_Sport_Herediano.svg/1872px-Escudo_del_Club_Sport_Herediano.svg.png"" alt="Image">
-                      <h3>Heredia</h3>
+                      <img src="{{ $team->imgB }}" alt="Image">
+                      <h3>{{ $team->teamB }}</h3>
                     </div>
                   </div>
                 </div>  
@@ -64,11 +64,11 @@
               <div class="text-center widget-vs-contents mb-4">
                 <h4>Liga Promerica</h4>
                 <p class="mb-5">
-                  <span class="d-block">December 20th, 2023</span>
-                  <span class="d-block">11:00 AM</span>
-                  <strong class="text-primary">Price: ₡10.000</strong>
+                  <span class="d-block">{{ $team->price1}}</span>
+                  <span class="d-block" >{{ $team->time}}</span>
+                  <strong class="text-primary">Price: ₡{{ $team->price2}}</strong>
                   <br>
-                  <strong class="text-primary">Ricardo Saprissa</strong>
+                  <strong class="text-primary">{{ $team->stadium}}</strong>
                 </p>
 
                 <!-- Button for choose the game -->
@@ -84,113 +84,8 @@
       </div>
     </div> <!-- .site-section -->
 
-    <!-- Second Container -->
-    <div class="site-section bg-dark">
-      <div class="container" id="">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="widget-next-match">
-              <div class="widget-title">
-                <h3>Match 2</h3>
-              </div>
-              <div class="widget-body mb-3">
-                <div class="widget-vs">
-                  <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
-                    <div class="team-1 text-center">
-                      <img src="https://lda.cr/wp-content/uploads/2018/11/logo-e1679507493906-353x400.png"" alt="Image">
-                      <h3>LDA </h3>
-                    </div>
-                    <div>
-                      <span class="vs"><span>VS</span></span>
-                    </div>
-                    <div class="team-2 text-center">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Escudo_Saprissa_2012.svg/1200px-Escudo_Saprissa_2012.svg.png"" alt="Image">
-                      <h3>Saprissa</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="text-center widget-vs-contents mb-4">
-                <h4>Liga Promerica</h4>
-                <p class="mb-5">
-                  <span class="d-block">December 28th, 2023</span>
-                  <span class="d-block">4:00 PM</span>
-                  <strong class="text-primary">Price: ₡18.000</strong>
-                  <br>
-                  <strong class="text-primary">Morera Soto</strong>
-                </p>
-
-                <!-- Button for choose the game -->
-                <input type="checkbox" name="button-game"> Chose Game
-                <p><input type="submit" value="Send"></p>
-                <!-- Finish of button for choose the game -->
-
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </div> <!-- .site-section -->
-    <!-- End Second Container -->
-    
-    <!-- Three Container -->
-    <div class="site-section bg-dark">
-      <div class="container" id="">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="widget-next-match">
-              <div class="widget-title">
-                <h3>Match 3</h3>
-              </div>
-              <div class="widget-body mb-3">
-                <div class="widget-vs">
-                  <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
-                    <div class="team-1 text-center">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Escudo_Saprissa_2012.svg/1200px-Escudo_Saprissa_2012.svg.png"" alt="Image">
-                      <h3>Saprissa</h3>
-                    </div>
-                    <div>
-                      <span class="vs"><span>VS</span></span>
-                    </div>
-                    <div class="team-2 text-center">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Escudo_del_Club_Sport_Cartagin%C3%A9s.svg/906px-Escudo_del_Club_Sport_Cartagin%C3%A9s.svg.png" alt="Image">
-                      <h3>Cartago</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="text-center widget-vs-contents mb-4">
-                <h4>Liga Promerica</h4>
-                <p class="mb-5">
-                  <span class="d-block">January 5th, 2024</span>
-                  <span class="d-block">6:00 PM</span>
-                  <strong class="text-primary">Price: ₡8.000</strong>
-                  <br>
-                  <strong class="text-primary">Ricardo Saprissa</strong>
-                </p>
-
-                <!-- Button for choose the game -->
-                <input type="checkbox" name="button-game"> Chose Game
-                <p><input type="submit" value="Send"></p>
-                <!-- Finish of button for choose the game -->
-
-              </div>
-
-
-              
-            </div>
-          </div>
-          
-        </div>
-      </div>
-      
-      
-
-    </div>
   </form>
+  @endforeach
     <!--  End Three Container-->
 
     <!-- Container of  Reservation-->
