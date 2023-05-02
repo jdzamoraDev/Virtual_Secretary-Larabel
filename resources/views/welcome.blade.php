@@ -166,7 +166,7 @@
     <h1>Hi, I'm your virtual assistant!</h1>
     <p class="lead">Here you can buy tickets to watch the matches of the national champion and buy merchandise. You can also contact us in our contect section.</p>
     <p class="lead">
-      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Buy tickets</a>
+      <a href="tickets" class="btn btn-lg btn-light fw-bold border-white bg-white">Buy tickets</a>
       <a href="store" class="btn btn-lg btn-light fw-bold border-white bg-white">Store</a>
       <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Contact</a>
     </p>
