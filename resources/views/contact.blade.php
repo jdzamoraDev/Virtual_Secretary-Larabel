@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Business Frontpage - Start Bootstrap Template</title>
+        <title>Virtual Secretary</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -80,7 +80,7 @@
                                     <div class="fw-bolder">Form submission successful!</div>
                                     To activate this form, sign up at
                                     <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    <a href="http://localhost/Virtual_Secretary-Larabel/public/">http://localhost/Virtual_Secretary-Larabel/public/</a>
                                 </div>
                             </div>
                             <!-- Submit error message-->
