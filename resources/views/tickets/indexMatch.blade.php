@@ -35,7 +35,7 @@
 
 <body>
 @foreach($teams as $team)
-<form action="" method="POST">
+
           <div class="container" id="{{ $team->id}}">
         <div class="row">
           <div class="col-lg-6">
@@ -72,8 +72,8 @@
                 </p>
 
                 <!-- Button for choose the game -->
-                <input type="checkbox" name="button-game"> Chose Game
-                <p><input type="submit" value="Send"></p>
+                <a href="./"><div class="d-grid"><button class="btn btn-primary" href="./welcome.blade.php">Chose Game</button></div></a>
+
                 <!-- Finish of button for choose the game -->
 
               </div>
@@ -84,7 +84,7 @@
       </div>
     </div> <!-- .site-section -->
 
-  </form>
+  
   @endforeach
     <!--  End Three Container-->
 
