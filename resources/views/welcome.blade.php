@@ -167,7 +167,11 @@
     <p class="lead">Here you can buy tickets to watch the matches of the national champion and buy merchandise. You can also contact us in our contect section.</p>
     <p class="lead">
       <a href="tickets" class="btn btn-lg btn-light fw-bold border-white bg-white">Buy tickets</a>
+<<<<<<< HEAD
       <a href="homestore" class="btn btn-lg btn-light fw-bold border-white bg-white">Store</a>
+=======
+      <a href="store" class="btn btn-lg btn-light fw-bold border-white bg-white">Store</a>
+>>>>>>> 1587c7fc8e3ab307a4b60674536a93c6d2a5758b
       <a href="contact" class="btn btn-lg btn-light fw-bold border-white bg-white">Contact</a>
     </p>
   </main>

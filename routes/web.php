@@ -40,4 +40,6 @@ Route::get('/homestore', [App\Http\Controllers\StoreController::class, 'homestor
 Route::get('/contact', [App\Http\Controllers\TeamController::class, 'contact'])->name('contact');
 
 
-
+Route::get('/contact', function () {
+    return view('contact');
+});
