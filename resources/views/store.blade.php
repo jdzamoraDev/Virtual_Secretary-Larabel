@@ -58,6 +58,7 @@
 					<div class="cart-total hidden">
 						<h3>Total:</h3>
 						<span class="total-pagar">$200</span>
+						<a href="checkout"><button onclick="">Confirm purchase</button></a>
 					</div>
 					<p class="cart-empty">El carrito está vacío</p>
 				</div>

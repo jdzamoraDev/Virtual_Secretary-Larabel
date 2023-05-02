@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>CheckOut Reservation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="./css/checkout.css">
+<link rel="stylesheet" href="./csstickets/checkout.css">
 
 </head>
 <body>
@@ -41,7 +41,7 @@
 	</div><!--End CONTAINER-->
 	
 <!-- partial -->
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="./js/scriptcheckout.js"></script>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="./jstickets/scriptcheckout.js"></script>
 
 </body>
 </html>
