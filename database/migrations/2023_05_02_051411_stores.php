@@ -11,7 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        
+        Schema::create('users', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->text('article');
+            $table->integer('price');
+            $table->string('image');
+            $table->timestamps();
+        });
     }
 
     /**
