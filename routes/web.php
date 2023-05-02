@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\MarketController;
+use App\Http\Controllers\StoreController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +18,9 @@ use App\Http\Controllers\MarketController;
 Route::get('/',function(){
     return view('welcome');
 });
-
+Route::get('/contactForm',function(){
+    return view('/contactForm');
+});
 
 Auth::routes();
 
@@ -27,11 +30,14 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('teams', TeamController::class);
+Route::resource('stores', StoreController::class);
 
-Route::resource('markets', MarketController::class);
 
 Route::get('/checkout', [App\Http\Controllers\TeamController::class, 'checkout'])->name('checkout');
 Route::get('/tickets', [App\Http\Controllers\TeamController::class, 'home'])->name('tickets');
-Route::get('/store', [App\Http\Controllers\MarketController::class, 'homestore'])->name('store');
+Route::get('/homestore', [App\Http\Controllers\StoreController::class, 'homestore'])->name('homestore');
+
+Route::get('/contact', [App\Http\Controllers\TeamController::class, 'contact'])->name('contact');
+
 
 

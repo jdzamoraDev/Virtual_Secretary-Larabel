@@ -30,6 +30,10 @@ class TeamController extends Controller
         $teams = Team::paginate();
         return view('tickets/indexMatch',compact('teams'));
     }
+    public function contact() {
+        return view('contact');
+    }
+
 
     /**
      * Show the form for creating a new resource.

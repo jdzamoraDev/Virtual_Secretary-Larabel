@@ -65,86 +65,22 @@
 			</div>
 		</header>
 		<div class="container-items">
+			@foreach ($stores as $store)
 			<div class="item">
 				<figure>
 					<img
-						src="https://cdn.shopify.com/s/files/1/0376/8329/8444/products/750x1100px-fem-casaMujermorada_600x.jpg?v=1670549433"
+						src="{{ $store->image }}"
 						alt="producto"
 					/>
 				</figure>
 				<div class="info-product">
-					<h2>New Kappa Ed. Player Women's Short Sleeve Jersey - Purple 2023 Regular Fit</h2>
-					<p class="price">$80</p>
+					<h2>{{ $store -> article }}</h2>
+					<p class="price">${{ $store -> price }}</p>
 					<button class="btn-add-cart">Add to cart</button>
 				</div>
 			</div>
-			<div class="item">
-				<figure>
-					<img
-						src="https://cdn.shopify.com/s/files/1/0376/8329/8444/products/750x1100pxHombremorada_600x.jpg?v=1670549510"
-						alt="producto"
-					/>
-				</figure>
-				<div class="info-product">
-					<h2>New Kappa Ed. Player Men's Short Sleeve Shirt - Purple 2023 Regular Fit</h2>
-					<p class="price">$80</p>
-					<button class="btn-add-cart">Add to cart</button>
-				</div>
-			</div>
-			<div class="item">
-				<figure>
-					<img
-						src="https://cdn.shopify.com/s/files/1/0376/8329/8444/products/750x1100px-fem-visitaMujerblanca_600x.jpg?v=1670549452"
-						alt="producto"
-					/>
-				</figure>
-				<div class="info-product">
-					<h2>New Kappa Ed. Player Women's Short Sleeve Jersey - White 2023 Regular Fit</h2>
-					<p class="price">$80</p>
-					<button class="btn-add-cart">Add to cart</button>
-				</div>
-			</div>
-			<div class="item">
-				<figure>
-					<img
-						src="https://cdn.shopify.com/s/files/1/0376/8329/8444/products/750x1100px-visitaHombreblanca_600x.jpg?v=1670549526"
-						alt="producto"
-					/>
-				</figure>
-				<div class="info-product">
-					<h2>New Kappa Ed. Player Men's Short Sleeve Jersey - White 2023 Regular Fit</h2>
-					<p class="price">$80</p>
-					<button class="btn-add-cart">Add to cart</button>
-				</div>
-			</div>
-			<div class="item">
-				<figure>
-					<img
-						src="https://cdn.shopify.com/s/files/1/0376/8329/8444/products/abrigo-frio-negro_600x.png?v=1640627162"
-						alt="producto"
-					/>
-				</figure>
-				<div class="info-product">
-					<h2>SP Kappa Cold Weather Sweater 2021 - Black</h2>
-					<p class="price">$120</p>
-					<button class="btn-add-cart">Add to cart</button>
-				</div>
-			</div>
-            <div class="item">
-				<figure>
-					<img
-						src="https://cdn.shopify.com/s/files/1/0376/8329/8444/products/FOTO-PRODUCTO_4_0383dec6-f1ac-4305-934e-70f283765e28_400x.png?v=1633019909"
-						alt="producto"
-					/>
-				</figure>
-				<div class="info-product">
-					<h2>SP There is only one champion! Men's Champion #36 Jersey - Black</h2>
-					<p class="price">$14</p>
-					<button class="btn-add-cart">Add to cart</button>
-				</div>
-			</div>
-		</div>
-
+			
+				@endforeach
 		<script src="js/store.js"></script>
 	</body>
 </html>
