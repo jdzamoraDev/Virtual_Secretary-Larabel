@@ -17,9 +17,7 @@ use App\Http\Controllers\MarketController;
 Route::get('/',function(){
     return view('welcome');
 });
-Route::get('/store',function(){
-    return view('store');
-});
+
 
 Auth::routes();
 
@@ -34,3 +32,6 @@ Route::resource('markets', MarketController::class);
 
 Route::get('/checkout', [App\Http\Controllers\TeamController::class, 'checkout'])->name('checkout');
 Route::get('/tickets', [App\Http\Controllers\TeamController::class, 'home'])->name('tickets');
+Route::get('/store', [App\Http\Controllers\MarketController::class, 'homestore'])->name('store');
+
+
