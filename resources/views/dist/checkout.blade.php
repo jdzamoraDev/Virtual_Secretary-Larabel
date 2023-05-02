@@ -13,7 +13,7 @@
 	<div class="total-logo">
 		<div class="total">
 			<span>Total:</span>
-			<span class="total-n">₡</span>
+			<span class="total-n">₡10000</span>
 		</div>
 		<div class="logo">
 			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Escudo_Saprissa_2012.svg/1200px-Escudo_Saprissa_2012.svg.png" height="65px">

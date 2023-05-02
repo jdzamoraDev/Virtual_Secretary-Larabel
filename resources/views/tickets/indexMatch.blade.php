@@ -72,7 +72,7 @@
                 </p>
 
                 <!-- Button for choose the game -->
-                <a href="./"><div class="d-grid"><button class="btn btn-primary" href="./welcome.blade.php">Chose Game</button></div></a>
+                <a href="checkout"><div class="d-grid"><button class="btn btn-primary" href="./welcome.blade.php">Chose Game</button></div></a>
 
                 <!-- Finish of button for choose the game -->
 
